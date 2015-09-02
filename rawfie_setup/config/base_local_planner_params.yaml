@@ -1,0 +1,34 @@
+TrajectoryPlannerROS:
+    # Robot Configuration Parameters (default: 2.5,2.5,3.2,0.5,0.05,2,-2,0.8,-0.1,false)
+    acc_lim_x: 1.5
+    acc_lim_y: 1.5
+    acc_lim_theta: 0.2
+    max_vel_x: 0.25
+    min_vel_x: 0.05
+    max_vel_theta: 0.2
+    min_vel_theta: -0.2
+    min_in_place_vel_theta: 0.2  
+    escape_vel: -0.1
+    holonomic_robot: true
+
+    # Goal Tolerance Parameters
+    #xy_goal_tolerance: 0.05  # 0.1
+    #yaw_goal_tolerance: 0.01  # 0.05
+    #latch_xy_goal_tolerance: true
+
+    # Forward Simulation Parameters
+    sim_time: 2.5
+    sim_granularity: 0.025
+    vx_samples: 20
+    vtheta_samples: 20
+
+    # Trajectory Scoring Parameters
+    gdist_scale: 0.8
+    pdist_scale: 0.6
+    occdist_scale: 0.01
+    heading_lookahead: 0.325
+    dwa: false
+
+    # Oscillation Prevention Parameters
+    oscillation_reset_dist: 0.05
+

@@ -1,0 +1,8 @@
+
+
+controller_frequency: 20.0
+controller_patience: 15.0
+clearing_radius: 0.59
+
+shutdown_costmaps: true
+

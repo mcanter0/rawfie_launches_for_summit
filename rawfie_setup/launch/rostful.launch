@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Call a python script to the run a service call to gazebo_ros to spawn a URDF robot -->
+  <node name="rostful_server" pkg="rostful" type="server" respawn="false" output="screen"
+        args="--topics /hokuyo_base/scan /imu_data /mavros/gps/fix
+        /cmd_vel /summit_xl/odom /tf /move_base_simple/goal /move_base/cancel
+       /move_base/status "/>
+
+</launch>
