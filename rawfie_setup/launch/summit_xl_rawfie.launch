@@ -3,16 +3,19 @@
 
   <!-- roslaunch arguments -->
   <arg name="debug" default="false"/>
-  <arg name="gui" default="true"/>
+  <arg name="gui" default="false"/>
 
   <!-- summit_xl_control launch file -->
   <include file="$(find summit_xl_control)/launch/summit_xl_control.launch" />
 
-  <!-- summit_xl_control launch file
+  <!-- rostful launch file 
   <include file="$(find rawfie_setup)/launch/rostful.launch" />
-  -->
-
-  <!-- summit_xl_control launch file -->
+  < rostful launch file >
+  <include file="$(find rawfie_setup)/launch/timed_rostful.launch" />
+  --> 
+  <!--RwfInterface timed launch -->
+  <include file="$(find rawfie_setup)/launch/timed_RwfInterface.launch" />
+  <!-- move_base launch file -->
   <include file="$(find rawfie_setup)/launch/move_base_nomap.launch" />
 
 

@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="rawfie_setup" type="timed_roslaunch.sh" 
+    args="10 rawfie_setup rostful.launch" 
+    name="timed_roslaunch" output="screen">
+  </node>
+</launch>
