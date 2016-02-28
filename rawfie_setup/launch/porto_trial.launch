@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- start lamse_ms6020 node -->
+  <node pkg="rescuer_ardu_ptu" type="ardu_ptu" name="ardu_ptu" output="screen">
+    <param name="port" value="/dev/ttyUSB_PTU" />
+    <param name="topic" value="/ardu_ptu/data" />
+    <param name="serial_number" value="AH01CF3A" />
+  </node>
+
+
+  <!-- move_base launch file 
+  <include file="$(find summit_xl_navigation)/launch/move_base_nomap.launch" />
+  -->
+
+  <node name="RwfProducerInterface" pkg="rawfie_interface" type="ros_kafka_producer.py" output="screen">
+  </node>
+  <node name="RwfConsumerInterface" pkg="rawfie_interface" type="ros_kafka_consumer.py" output="screen">
+  </node>
+
+</launch>
